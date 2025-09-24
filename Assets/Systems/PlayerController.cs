@@ -181,9 +181,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         handlePlayerMovement();
-
-        RaycastFiredInput();
-
+        
     }
 
     private void LateUpdate()
