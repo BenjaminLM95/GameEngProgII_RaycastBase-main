@@ -182,8 +182,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        handlePlayerMovement();
-        ColorTarget(); 
+        handlePlayerMovement();        
     }
 
     private void LateUpdate()
@@ -636,30 +635,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+    
 
     #endregion
 
-    private void ColorTarget() 
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, 10f))
-        {
-            if (hit.collider.gameObject.CompareTag("Target"))
-            {
-                var hitObj = hit.collider.gameObject;
-                var hitColor = hitObj.GetComponent<Renderer>();
-
-                 
-                hitColor.material.color = Color.yellow;
-                
-            }          
-
-        }
-        
-        
-    }
+   
 
     private void OnEnable()
     {
