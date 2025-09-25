@@ -9542,27 +9542,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &901332127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3466806306095891343, guid: 8862c308bd6b94545a0857721de4959d, type: 3}
-  m_PrefabInstance: {fileID: 1584407276}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &901332131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901332127}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a24947212510d4e94348a96c6a20f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 1262832145}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &907680194
 GameObject:
   m_ObjectHideFlags: 0
@@ -17150,10 +17129,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3466806306095891343, guid: 8862c308bd6b94545a0857721de4959d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 901332131}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8862c308bd6b94545a0857721de4959d, type: 3}
 --- !u!1 &1589412134
 GameObject:
