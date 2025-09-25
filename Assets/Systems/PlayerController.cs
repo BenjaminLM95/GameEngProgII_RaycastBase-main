@@ -68,8 +68,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Raycast Challenge")]
     public LayerMask layerMask;
+    public LayerMask ignoreMask; 
     public Camera mainCam;
-    private Color myColor; 
+    private Color myColor;
+    private Color prevColor; 
     
    
 
@@ -181,7 +183,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         handlePlayerMovement();
-        
+        ColorTarget(); 
     }
 
     private void LateUpdate()
@@ -608,7 +610,7 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, 10f))
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, 10f, ~ignoreMask))
         {
             
 
@@ -637,6 +639,27 @@ public class PlayerController : MonoBehaviour
 
 
     #endregion
+
+    private void ColorTarget() 
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, 10f))
+        {
+            if (hit.collider.gameObject.CompareTag("Target"))
+            {
+                var hitObj = hit.collider.gameObject;
+                var hitColor = hitObj.GetComponent<Renderer>();
+
+                 
+                hitColor.material.color = Color.yellow;
+                
+            }          
+
+        }
+        
+        
+    }
 
     private void OnEnable()
     {
